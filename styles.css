@@ -1,0 +1,122 @@
+
+* {
+    margin: 0; /* Tar bort standardmarginaler */
+    padding: 0; /* Tar bort standardutfyllnad */
+    box-sizing: border-box; /* Gör att padding och border räknas in i elementets totala storlek */
+}
+
+body {
+    font-family: 'Arial', sans-serif; /* Anger fonttypen */
+    background: linear-gradient(to bottom, #fffbc4, #8cc1db); /* Gradientbakgrund från ljusgrå till mörkgrå */
+    display: flex; /* Gör att body använder flexbox */
+    justify-content: center; /* Centrerar innehållet horisontellt */
+    align-items: center; /* Centrerar innehållet vertikalt */
+    height: 100vh; /* Gör att body fyller hela höjden av skärmen */
+}
+
+/* Solen som en dekorativ bakgrundselement */
+.sun {
+    position: absolute; /* Positionerar solen absolut relativt till body */
+    top: 60px; /* Placerar solen 60px från botten */
+    left: 50%; /* Centrerar solen horisontellt */
+    width: 150px; /* Bredd på solen */
+    height: 150px; /* Höjd på solen */
+    background-color: #FF8C00; /* Färg på solen */
+    border-radius: 50%; /* Gör elementet runt */
+    transform: translateX(-50%); /* Justerar positionen så att solen blir helt centrerad */
+    box-shadow: 0 0 20px rgba(255, 140, 0, 0.8); /* Lägger till en ljuseffekt */
+    z-index: -1; /* Lägger solen bakom andra element */
+}
+
+.moon {
+    position: absolute; /* Positionerar månen absolut relativt till body */
+    bottom: 60px; /* Placerar månen 60px från botten */
+    left: 50%; /* Centrerar månen horisontellt */
+    width: 150px; /* Bredd på månen */
+    height: 150px; /* Höjd på månen */
+    background-color: #7f71ff; /* Färg på månen */
+    border-radius: 50%; /* Gör elementet runt */
+    transform: translateX(-50%); /* Justerar positionen så att månen blir helt centrerad */
+    box-shadow: 0 0 20px rgba(255, 225, 187, 0.8); /* Lägger till en ljuseffekt */
+    z-index: -1; /* Lägger månen bakom andra element */
+}
+
+
+/* Centrering av login-rutan */
+.login-container {
+    display: flex; /* Använder flexbox */
+    justify-content: center; /* Centrerar innehållet horisontellt */
+    align-items: center; /* Centrerar innehållet vertikalt */
+    width: 100%; /* Full bredd */
+    height: 100%; /* Full höjd */
+    padding: 20px; /* Lite utrymme runt innehållet */
+}
+
+.login-box {
+    background-color: rgb(199, 248, 252); /* Sätter bakgrundsfärg till vit */
+    border-radius: 10px; /* Rundade hörn */
+    padding: 40px; /* Utrymme inuti boxen */
+    box-shadow: 0px 2px 20px rgba(0, 0, 0, 0.1); /* Lägger till en skugga */
+    width: 350px; /* Sätter en maxbredd */
+    text-align: center; /* Centrerar texten */
+    max-width: 90%; /* Förhindrar att rutan blir för bred på små skärmar */
+}
+
+h1 {
+    font-size: 24px; /* Storlek på text */
+    margin-bottom: 20px; /* Utrymme under rubriken */
+    font-weight: bold; /* Gör texten fetstil */
+}
+
+.input-group {
+    margin-bottom: 20px; /* Utrymme mellan inmatningsfält */
+}
+
+input {
+    width: 100%; /* Full bredd */
+    padding: 10px; /* Utrymme inuti fältet */
+    margin: 5px 0; /* Litet utrymme mellan fält */
+    border: 1px solid #CCD6DD; /* Ljusgrå kant */
+    border-radius: 30px; /* Rundade hörn */
+    font-size: 16px; /* Textstorlek */
+    transition: border-color 0.3s ease; /* Mjuk övergång vid hover */
+}
+
+/* Effekt när man klickar på input-fältet */
+input:focus {
+    outline: none; /* Tar bort standard outline */
+    border-color: #1c30e9; /* Blå kant vid fokus */
+    box-shadow: 0 0 5px rgba(29, 161, 242, 0.5); /* Lägger till en lätt blå skugga */
+}
+
+/* Stilar för knappar */
+.login-btn, .register-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #1DA1F2; /* Blå färg */
+    color: white; /* Vit text */
+    border: none; /* Ingen kant */
+    border-radius: 30px; /* Rundade hörn */
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
+}
+
+/* Effekt vid hover på knappar */
+.login-btn:hover, .register-btn:hover {
+    background-color: #1A91DA; /* Mörkare blå vid hover */
+}
+
+/* Anpassningar för mindre skärmar */
+@media (max-width: 480px) {
+    .login-box {
+        padding: 30px;
+        width: 90%;
+    }
+    .sun {
+        width: 100px;
+        height: 100px;
+        bottom: 30px;
+    }
+}

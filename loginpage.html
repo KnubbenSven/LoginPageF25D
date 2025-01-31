@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- Anger teckenuppsättningen för dokumentet -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Gör att sidan är responsiv på olika enheter -->
+    <title>Välkommen</title> <!-- Titel som visas i webbläsarens flik -->
+    <link rel="stylesheet" href="styles.css"> <!-- Länk till den externa CSS-filen -->
+</head>
+<body>
+    <!-- Solen i bakgrunden, en dekorativ cirkel -->
+    <div class="sun"></div>
+    <!-- Blåa Månen i bakgrunden, en dekorativ cirkel -->
+    <div class="moon"></div>
+    <!-- Container för inloggningsrutan -->
+    <div class="login-container">
+        <div class="login-box">
+            <h1>Välkommen!</h1> <!-- Rubrik för inloggningssektionen -->
+            
+            <!-- Inloggningsformulär -->
+            <form action="#"> <!-- Formulär som inte skickar data till en specifik server -->
+                <div class="input-group">
+                    <input type="text" id="username" placeholder="Email" required> <!-- Fält för e-postinmatning -->
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Lösenord" required> <!-- Fält för lösenord -->
+                </div>
+                
+                <!-- Inloggningsknapp -->
+                <button type="submit" class="login-btn" aria-label="Log in to Twitter">Log in</button>
+                
+                <!-- Registreringsknapp -->
+                <button type="button" class="register-btn" aria-label="Register for Twitter">Register</button>
+            </form>
+            
+            <!-- "Kom ihåg mig" checkbox -->
+            <div class="remember-me">
+                <label>
+                    <input type="checkbox" id="remember-me"> <!-- Checkbox för att komma ihåg användaren -->
+                    Kom ihåg mig
+                </label>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
